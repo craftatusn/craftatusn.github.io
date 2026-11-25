@@ -1,0 +1,1391 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精业影视传媒_企业影视内容制作_品牌视频与影像服务</title>
+<meta name="description" content="精业影视传媒官方网站，专注企业影像与品牌视频内容制作，提供宣传片、纪录片、短视频内容生态与影像服务，用专业影像讲述值得信赖的品牌故事。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b2a'/%3E%3Cpath d='M22 18l24 14-24 14z' fill='%23e8b45a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --jy-navy:#0d1b2a;
+  --jy-navy-2:#13293d;
+  --jy-navy-3:#1b3a54;
+  --jy-gold:#e8b45a;
+  --jy-gold-soft:#f5d79a;
+  --jy-ice:#eef3f7;
+  --jy-white:#ffffff;
+  --jy-gray:#5c6b7a;
+  --jy-line:#dce4eb;
+  --jy-shadow:0 18px 40px rgba(13,27,42,.12);
+  --jy-radius:14px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:var(--jy-navy);
+  background:var(--jy-ice);
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.35;}
+p{margin:0 0 12px;}
+ul{margin:0;padding:0;list-style:none;}
+
+.jy-skip{position:absolute;left:-9999px;top:0;background:var(--jy-gold);color:var(--jy-navy);padding:10px 16px;z-index:999;}
+.jy-skip:focus{left:12px;top:12px;}
+
+/* ============ sticky wrapper: notice + header ============ */
+.jy-sticky{position:sticky;top:0;z-index:120;}
+
+.jy-notice{
+  background:var(--jy-navy);
+  color:var(--jy-ice);
+  font-size:13px;
+  letter-spacing:.2px;
+  border-bottom:1px solid rgba(232,180,90,.25);
+}
+.jy-notice-inner{
+  max-width:1180px;margin:0 auto;padding:8px 24px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.jy-notice-tag{
+  flex:0 0 auto;background:var(--jy-gold);color:var(--jy-navy);
+  font-weight:700;font-size:12px;border-radius:999px;padding:1px 10px;
+}
+.jy-notice-text{flex:1 1 auto;min-width:220px;color:#cfe0ee;}
+.jy-notice-text strong{color:var(--jy-gold-soft);font-weight:600;}
+.jy-notice-more{color:var(--jy-gold-soft);font-size:12px;border-bottom:1px dashed rgba(232,180,90,.5);}
+.jy-notice-more:hover{color:#fff;}
+
+.jy-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--jy-line);
+  box-shadow:0 6px 18px rgba(13,27,42,.06);
+}
+.jy-header-inner{
+  max-width:1180px;margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;gap:24px;
+}
+.jy-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.jy-brand-mark{
+  width:40px;height:40px;border-radius:10px;background:var(--jy-navy);
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.jy-brand-mark svg{width:20px;height:20px;}
+.jy-brand-name{font-size:18px;font-weight:800;letter-spacing:.5px;}
+.jy-brand-name span{color:var(--jy-gold);}
+.jy-brand-sub{font-size:11px;color:var(--jy-gray);letter-spacing:2px;}
+
+.jy-nav{flex:1 1 auto;min-width:0;}
+.jy-nav ul{display:flex;gap:6px;flex-wrap:wrap;}
+.jy-nav a{
+  display:inline-block;padding:8px 12px;border-radius:8px;
+  font-size:14.5px;color:var(--jy-navy-2);font-weight:500;
+  transition:background .18s,color .18s;
+}
+.jy-nav a:hover{background:var(--jy-ice);color:var(--jy-navy);}
+
+.jy-header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.jy-search{
+  display:flex;align-items:center;gap:6px;background:var(--jy-ice);
+  border:1px solid var(--jy-line);border-radius:999px;padding:5px 6px 5px 14px;
+  transition:border-color .18s,box-shadow .18s;
+}
+.jy-search:focus-within{border-color:var(--jy-gold);box-shadow:0 0 0 3px rgba(232,180,90,.2);}
+.jy-search input{
+  border:0;background:transparent;outline:none;font-size:14px;width:150px;color:var(--jy-navy);font-family:inherit;
+}
+.jy-search button{
+  border:0;background:var(--jy-navy);color:#fff;border-radius:999px;
+  padding:5px 14px;font-size:13px;font-weight:600;transition:background .18s;
+}
+.jy-search button:hover{background:var(--jy-navy-3);}
+.jy-search-feedback{
+  max-width:1180px;margin:0 auto;padding:0 24px;font-size:13px;color:var(--jy-gray);
+  min-height:0;transition:min-height .2s;
+}
+.jy-search-feedback.on{min-height:24px;padding-bottom:6px;}
+
+.jy-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border-radius:999px;padding:10px 20px;font-size:14px;font-weight:600;
+  border:1px solid transparent;transition:transform .18s,background .18s,color .18s,box-shadow .18s;
+}
+.jy-btn:hover{transform:translateY(-1px);}
+.jy-btn-ghost{background:transparent;border-color:var(--jy-line);color:var(--jy-navy);}
+.jy-btn-ghost:hover{border-color:var(--jy-navy);}
+.jy-btn-gold{background:var(--jy-gold);color:var(--jy-navy);box-shadow:0 8px 20px rgba(232,180,90,.32);}
+.jy-btn-gold:hover{background:var(--jy-gold-soft);}
+.jy-btn-dark{background:var(--jy-navy);color:#fff;}
+.jy-btn-dark:hover{background:var(--jy-navy-3);}
+.jy-btn-sm{padding:6px 14px;font-size:13px;}
+
+.jy-burger{
+  display:none;border:1px solid var(--jy-line);background:#fff;border-radius:10px;
+  width:42px;height:42px;align-items:center;justify-content:center;flex-direction:column;gap:4px;
+}
+.jy-burger span{display:block;width:18px;height:2px;background:var(--jy-navy);border-radius:2px;transition:transform .2s,opacity .2s;}
+.jy-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.jy-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.jy-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+/* ============ layout ============ */
+section[id]{scroll-margin-top:150px;}
+.jy-wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+.jy-section{padding:64px 0;}
+.jy-section-alt{background:var(--jy-white);}
+.jy-section-navy{background:var(--jy-navy);color:var(--jy-ice);}
+
+.jy-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2.5px;
+  color:var(--jy-gold);font-weight:700;text-transform:uppercase;margin-bottom:12px;
+}
+.jy-eyebrow::before{content:"";width:22px;height:2px;background:var(--jy-gold);display:block;}
+.jy-h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:.5px;margin-bottom:14px;}
+.jy-h2 em{font-style:normal;color:var(--jy-gold);}
+.jy-lead{color:var(--jy-gray);max-width:760px;font-size:15.5px;}
+.jy-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px;}
+.jy-h3{font-size:19px;font-weight:700;margin-bottom:8px;}
+
+/* ============ hero ============ */
+.jy-hero{
+  background:
+    radial-gradient(circle at 82% 12%, rgba(232,180,90,.16), transparent 45%),
+    linear-gradient(155deg,var(--jy-navy) 0%, #122b41 58%, #0d1b2a 100%);
+  color:var(--jy-ice);
+  padding:72px 0 78px;
+  position:relative;
+  overflow:hidden;
+}
+.jy-hero::after{
+  content:"";position:absolute;inset:auto -10% -55% -10%;height:70%;
+  background:radial-gradient(ellipse at center, rgba(27,58,84,.85), transparent 70%);
+  z-index:0;
+}
+.jy-hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:5fr 5fr;gap:48px;align-items:center;
+}
+.jy-hero-title{font-size:clamp(34px,4.8vw,56px);font-weight:900;letter-spacing:1px;line-height:1.18;margin:0 0 18px;}
+.jy-hero-title .jy-gold{color:var(--jy-gold);}
+.jy-hero-desc{color:#c6d6e4;font-size:16px;max-width:560px;}
+.jy-hero-desc strong{color:var(--jy-gold-soft);font-weight:600;}
+.jy-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+.jy-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+  margin-top:34px;border-top:1px solid rgba(232,180,90,.25);padding-top:22px;
+}
+.jy-stat b{display:block;font-size:clamp(22px,2.6vw,30px);color:var(--jy-gold);font-weight:900;letter-spacing:.5px;}
+.jy-stat span{font-size:12.5px;color:#9fb4c6;letter-spacing:.5px;}
+
+.jy-hero-visual{position:relative;}
+.jy-hero-visual figure{margin:0;border-radius:20px;overflow:hidden;box-shadow:0 28px 60px rgba(0,0,0,.45);border:1px solid rgba(232,180,90,.25);}
+.jy-hero-visual img{width:100%;aspect-ratio:16/11;object-fit:cover;}
+.jy-hero-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:74px;height:74px;border-radius:50%;border:0;
+  background:rgba(232,180,90,.92);color:var(--jy-navy);
+  display:grid;place-items:center;box-shadow:0 0 0 10px rgba(232,180,90,.18);
+  transition:transform .2s,box-shadow .2s;
+}
+.jy-hero-play:hover{transform:translate(-50%,-50%) scale(1.06);box-shadow:0 0 0 16px rgba(232,180,90,.14);}
+.jy-hero-play svg{width:26px;height:26px;margin-left:3px;}
+.jy-hero-caption{
+  position:absolute;left:20px;bottom:18px;right:20px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  font-size:12.5px;color:#eaf2f8;
+}
+.jy-hero-caption span{background:rgba(13,27,42,.72);border:1px solid rgba(232,180,90,.3);border-radius:999px;padding:4px 12px;}
+
+/* ============ intro / interpretation ============ */
+.jy-intro-card{
+  background:var(--jy-white);border-radius:var(--jy-radius);padding:32px 34px;
+  box-shadow:var(--jy-shadow);border:1px solid var(--jy-line);
+}
+.jy-intro-card p{color:#3d4b5a;}
+.jy-interpret-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;}
+.jy-interpret-block{
+  background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);
+  padding:26px 28px;border-left:4px solid var(--jy-gold);
+}
+.jy-interpret-block h3{font-size:19px;margin-bottom:10px;}
+.jy-interpret-block p{color:#41505f;font-size:15px;}
+.jy-figure-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:26px 0 4px;}
+.jy-figure-row figure{margin:0;background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);overflow:hidden;}
+.jy-figure-row img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.jy-figure-row figcaption{padding:12px 16px;font-size:13px;color:var(--jy-gray);}
+
+/* ============ featured ============ */
+.jy-feature-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:start;}
+.jy-feature-main{
+  background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);overflow:hidden;
+  box-shadow:var(--jy-shadow);transition:transform .2s;
+}
+.jy-feature-main:hover{transform:translateY(-3px);}
+.jy-feature-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.jy-feature-body{padding:22px 24px 24px;}
+.jy-tagline{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.jy-tag{
+  display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;
+  background:var(--jy-ice);color:var(--jy-navy-3);border:1px solid var(--jy-line);
+}
+.jy-tag-gold{background:rgba(232,180,90,.18);border-color:rgba(232,180,90,.5);color:#8a6117;}
+.jy-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--jy-gray);margin-top:12px;}
+.jy-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.jy-mini-btn{
+  border:1px solid var(--jy-line);background:#fff;border-radius:999px;
+  font-size:12.5px;padding:5px 12px;color:var(--jy-navy-2);display:inline-flex;align-items:center;gap:5px;
+  transition:background .16s,border-color .16s,color .16s;
+}
+.jy-mini-btn:hover{border-color:var(--jy-gold);background:rgba(232,180,90,.12);}
+.jy-mini-btn.liked{background:var(--jy-navy);color:#fff;border-color:var(--jy-navy);}
+.jy-mini-btn.saved{border-color:var(--jy-gold);color:#8a6117;background:rgba(232,180,90,.16);}
+
+.jy-list-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;}
+.jy-list-card{
+  background:#fff;border:1px solid var(--jy-line);border-radius:12px;padding:16px 18px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;
+  transition:border-color .18s,transform .18s;
+}
+.jy-list-card:hover{border-color:var(--jy-gold);transform:translateX(3px);}
+.jy-list-card h3{font-size:15.5px;margin-bottom:4px;}
+.jy-list-card p{font-size:13px;color:var(--jy-gray);margin:0;}
+.jy-list-data{font-size:12px;color:var(--jy-gray);text-align:right;white-space:nowrap;}
+
+/* ============ video stream ============ */
+.jy-stream-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.jy-video-card{
+  background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;
+}
+.jy-video-card:hover{transform:translateY(-4px);box-shadow:var(--jy-shadow);}
+.jy-video-card .jy-thumb{position:relative;}
+.jy-video-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.jy-badge{
+  position:absolute;left:12px;top:12px;background:rgba(13,27,42,.82);color:var(--jy-gold-soft);
+  font-size:11.5px;padding:3px 10px;border-radius:999px;border:1px solid rgba(232,180,90,.35);
+}
+.jy-video-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1 1 auto;}
+.jy-video-body h3{font-size:16px;}
+.jy-video-body p{font-size:13.5px;color:var(--jy-gray);margin:0;}
+.jy-video-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px;}
+.jy-video-foot .jy-author{font-size:12.5px;color:var(--jy-navy-3);font-weight:600;}
+
+/* ============ topics ============ */
+.jy-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.jy-topic-card{
+  background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);padding:22px 22px 18px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.jy-topic-card .jy-status{
+  font-size:11.5px;color:#2f7a52;background:#e6f4ec;border:1px solid #bfe3ce;
+  border-radius:999px;padding:2px 10px;align-self:flex-start;
+}
+.jy-topic-card .jy-status.plan{color:#8a6117;background:rgba(232,180,90,.18);border-color:rgba(232,180,90,.5);}
+.jy-topic-card h3{font-size:17px;}
+.jy-topic-card ul{display:flex;flex-direction:column;gap:6px;margin-top:2px;}
+.jy-topic-card li{font-size:13.5px;color:#3f4e5d;padding-left:14px;position:relative;}
+.jy-topic-card li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--jy-gold);}
+
+/* ============ authors ============ */
+.jy-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.jy-author-card{
+  background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);padding:22px;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+}
+.jy-avatar{
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  font-size:20px;font-weight:800;color:#fff;flex:0 0 auto;letter-spacing:1px;
+}
+.jy-avatar.a1{background:linear-gradient(140deg,#1b3a54,#2f7a9e);}
+.jy-avatar.a2{background:linear-gradient(140deg,#a56a1c,#e8b45a);}
+.jy-avatar.a3{background:linear-gradient(140deg,#2f7a52,#7fb98f);}
+.jy-avatar.a4{background:linear-gradient(140deg,#6b3f7a,#b98fc6);}
+.jy-avatar.a5{background:linear-gradient(140deg,#8a3a3a,#d98787);}
+.jy-author-card h3{font-size:16.5px;margin-bottom:2px;}
+.jy-author-card .jy-domain{font-size:12.5px;color:var(--jy-gold);font-weight:600;letter-spacing:.4px;}
+.jy-author-card .jy-counts{font-size:12px;color:var(--jy-gray);margin:6px 0 8px;display:flex;gap:14px;flex-wrap:wrap;}
+.jy-author-card p{font-size:13.5px;color:#44525f;margin:0 0 10px;}
+.jy-author-link{
+  border:0;background:transparent;padding:0;font-size:13px;font-weight:600;color:var(--jy-navy-3);
+  border-bottom:1px solid var(--jy-gold);display:inline-block;
+}
+.jy-author-link:hover{color:var(--jy-gold);}
+
+/* ============ comments ============ */
+.jy-comment-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;}
+.jy-comment-list{display:flex;flex-direction:column;gap:14px;}
+.jy-comment{
+  background:#fff;border:1px solid var(--jy-line);border-radius:12px;padding:16px 18px;
+}
+.jy-comment .jy-c-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--jy-gray);margin-bottom:6px;}
+.jy-comment strong{color:var(--jy-navy);font-size:13.5px;}
+.jy-comment p{margin:0;font-size:14px;color:#3f4e5d;}
+.jy-quote-block{
+  background:linear-gradient(150deg,var(--jy-navy),#17364f);color:var(--jy-ice);
+  border-radius:var(--jy-radius);padding:28px;border:1px solid rgba(232,180,90,.28);
+}
+.jy-quote-block blockquote{margin:0 0 14px;font-size:17px;line-height:1.7;color:#eaf2f8;}
+.jy-quote-block blockquote::before{content:"“";color:var(--jy-gold);font-size:30px;line-height:0;vertical-align:-8px;margin-right:4px;}
+.jy-quote-block cite{font-style:normal;font-size:13px;color:#a9c0d2;}
+.jy-score{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;border-top:1px solid rgba(232,180,90,.25);padding-top:18px;}
+.jy-score div b{display:block;font-size:24px;color:var(--jy-gold);font-weight:900;}
+.jy-score div span{font-size:12px;color:#a9c0d2;}
+
+/* ============ dynamic / faq / partners ============ */
+.jy-two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start;}
+.jy-news{display:flex;flex-direction:column;gap:12px;}
+.jy-news li{
+  background:#fff;border:1px solid var(--jy-line);border-radius:12px;padding:14px 18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px;
+}
+.jy-news li time{font-size:12.5px;color:var(--jy-gray);flex:0 0 auto;}
+.jy-news li b{font-weight:600;}
+
+.jy-faq{display:flex;flex-direction:column;gap:10px;}
+.jy-faq details{
+  background:#fff;border:1px solid var(--jy-line);border-radius:12px;padding:14px 18px;
+}
+.jy-faq summary{
+  cursor:pointer;font-weight:600;font-size:14.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.jy-faq summary::-webkit-details-marker{display:none;}
+.jy-faq summary::after{content:"+";color:var(--jy-gold);font-size:18px;font-weight:700;flex:0 0 auto;}
+.jy-faq details[open] summary::after{content:"−";}
+.jy-faq details p{font-size:13.5px;color:var(--jy-gray);margin:10px 0 0;}
+
+.jy-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.jy-partner{
+  background:#fff;border:1px dashed var(--jy-line);border-radius:12px;padding:18px 12px;
+  text-align:center;font-size:13.5px;color:var(--jy-navy-3);font-weight:600;
+  transition:border-color .18s,background .18s;
+}
+.jy-partner:hover{border-color:var(--jy-gold);background:rgba(232,180,90,.08);}
+
+/* ============ contact / submit ============ */
+.jy-contact-card{
+  background:#fff;border:1px solid var(--jy-line);border-radius:var(--jy-radius);padding:28px;
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center;
+}
+.jy-contact-card p{color:var(--jy-gray);margin:6px 0 0;font-size:14px;}
+
+/* ============ footer ============ */
+.jy-footer{background:#0a1622;color:#9fb4c6;padding:56px 0 26px;font-size:14px;}
+.jy-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;}
+.jy-footer h4{color:#fff;font-size:15px;margin-bottom:12px;letter-spacing:.6px;}
+.jy-footer li{margin-bottom:8px;font-size:13.5px;}
+.jy-footer a:hover{color:var(--jy-gold-soft);}
+.jy-footer .jy-brand-name{color:#fff;font-size:17px;}
+.jy-footer-bottom{
+  border-top:1px solid rgba(159,180,198,.18);margin-top:34px;padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#71879b;
+}
+.jy-foot-desc{font-size:13.5px;color:#869cb0;margin-top:10px;max-width:320px;}
+
+/* ============ toast / modal / backtop ============ */
+.jy-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--jy-navy);color:#fff;border:1px solid rgba(232,180,90,.5);
+  padding:10px 20px;border-radius:999px;font-size:13.5px;z-index:400;
+  opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;
+}
+.jy-toast.show{opacity:1;transform:translate(-50%,0);}
+
+.jy-backtop{
+  position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:50%;
+  background:var(--jy-navy);color:var(--jy-gold);border:1px solid rgba(232,180,90,.45);
+  display:grid;place-items:center;z-index:300;opacity:0;pointer-events:none;
+  transition:opacity .22s,transform .22s;box-shadow:0 10px 24px rgba(13,27,42,.3);
+}
+.jy-backtop.show{opacity:1;pointer-events:auto;}
+.jy-backtop:hover{transform:translateY(-3px);}
+
+.jy-modal{
+  position:fixed;inset:0;background:rgba(10,22,34,.72);z-index:500;
+  display:none;align-items:center;justify-content:center;padding:24px;
+}
+.jy-modal.open{display:flex;}
+.jy-modal-box{
+  background:#fff;border-radius:16px;max-width:480px;width:100%;padding:28px 26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.35);position:relative;
+  max-height:86vh;overflow:auto;
+}
+.jy-modal-box h3{font-size:19px;margin-bottom:10px;}
+.jy-modal-box p{font-size:14px;color:var(--jy-gray);}
+.jy-modal-close{
+  position:absolute;right:14px;top:12px;border:0;background:transparent;font-size:22px;
+  color:var(--jy-gray);line-height:1;
+}
+.jy-modal-close:hover{color:var(--jy-navy);}
+.jy-modal-field{display:flex;flex-direction:column;gap:6px;margin:12px 0;font-size:13.5px;color:var(--jy-navy-2);}
+.jy-modal-field input,.jy-modal-field textarea{
+  border:1px solid var(--jy-line);border-radius:10px;padding:9px 12px;font-family:inherit;
+  font-size:14px;outline:none;resize:vertical;
+}
+.jy-modal-field input:focus,.jy-modal-field textarea:focus{border-color:var(--jy-gold);box-shadow:0 0 0 3px rgba(232,180,90,.2);}
+
+/* ============ responsive ============ */
+@media (max-width:1024px){
+  .jy-hero-grid{grid-template-columns:minmax(0,1fr);gap:34px;}
+  .jy-feature-grid{grid-template-columns:minmax(0,1fr);}
+  .jy-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .jy-comment-layout{grid-template-columns:minmax(0,1fr);}
+  .jy-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .jy-partner-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .jy-two-col{grid-template-columns:minmax(0,1fr);}
+}
+@media (max-width:820px){
+  .jy-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--jy-line);
+    padding:10px 16px 16px;box-shadow:0 14px 26px rgba(13,27,42,.12);
+  }
+  .jy-nav.open{display:block;}
+  .jy-nav ul{flex-direction:column;gap:2px;}
+  .jy-nav a{display:block;padding:10px 12px;}
+  .jy-header-inner{position:relative;flex-wrap:wrap;}
+  .jy-burger{display:flex;}
+  .jy-header-tools{flex:1 1 auto;justify-content:flex-end;}
+  .jy-search input{width:110px;}
+  .jy-stream-grid{grid-template-columns:minmax(0,1fr);}
+  .jy-author-grid{grid-template-columns:minmax(0,1fr);}
+  .jy-figure-row{grid-template-columns:minmax(0,1fr);}
+  .jy-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media (max-width:600px){
+  .jy-section{padding:46px 0;}
+  .jy-wrap,.jy-header-inner,.jy-notice-inner{padding-left:16px;padding-right:16px;}
+  .jy-topic-grid{grid-template-columns:minmax(0,1fr);}
+  .jy-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .jy-footer-grid{grid-template-columns:minmax(0,1fr);gap:22px;}
+  .jy-search input{width:86px;}
+  .jy-hero{padding:48px 0 56px;}
+  .jy-list-card{grid-template-columns:minmax(0,1fr);}
+  .jy-list-data{text-align:left;}
+  .jy-intro-card{padding:22px;}
+  .jy-interpret-block{padding:20px;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+<a class="jy-skip" href="#jy-main">跳到主要内容</a>
+
+<div class="jy-sticky">
+  <div class="jy-notice" id="jy-notice">
+    <div class="jy-notice-inner">
+      <span class="jy-notice-tag">官方发布</span>
+      <div class="jy-notice-text">
+        <strong>11月22日更新：</strong>精业影视传媒「城市匠人」第二季第 3 集上线，同步开放 12 月企业影像招募与「新影像提案大赛」报名通道。
+      </div>
+      <a class="jy-notice-more" href="#jy-topics">查看更新详情 →</a>
+    </div>
+  </div>
+
+  <header class="jy-header">
+    <div class="jy-header-inner">
+      <a class="jy-brand" href="#jy-hero">
+        <span class="jy-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M20 14l30 18-30 18z" fill="#e8b45a"/></svg>
+        </span>
+        <span>
+          <span class="jy-brand-name">精业<span>影视</span></span>
+          <span class="jy-brand-sub">JINGYE FILM</span>
+        </span>
+      </a>
+
+      <nav class="jy-nav" id="jy-nav" aria-label="主导航">
+        <ul>
+          <li><a href="#jy-about">品牌简介</a></li>
+          <li><a href="#jy-feature">焦点影像</a></li>
+          <li><a href="#jy-stream">视频内容</a></li>
+          <li><a href="#jy-topics">专题企划</a></li>
+          <li><a href="#jy-authors">创作者</a></li>
+          <li><a href="#jy-comments">用户口碑</a></li>
+          <li><a href="#jy-faq">常见问题</a></li>
+        </ul>
+      </nav>
+
+      <div class="jy-header-tools">
+        <div class="jy-search">
+          <input type="search" id="jy-search-input" placeholder="搜索影片/创作者" aria-label="站内搜索">
+          <button type="button" id="jy-search-btn">搜索</button>
+        </div>
+        <button class="jy-btn jy-btn-gold jy-btn-sm" type="button" data-open-modal="jy-modal-submit">投稿</button>
+        <button class="jy-burger" id="jy-burger" aria-label="展开导航" aria-expanded="false" aria-controls="jy-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="jy-search-feedback" id="jy-search-feedback" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="jy-main">
+
+  <!-- S2 HERO -->
+  <section class="jy-hero" id="jy-hero">
+    <div class="jy-wrap jy-hero-grid">
+      <div>
+        <span class="jy-eyebrow">企业级影像品牌官网</span>
+        <h1 class="jy-hero-title">精业影视传媒<br><span class="jy-gold">专业影像内容</span>与品牌视频平台</h1>
+        <p class="jy-hero-desc">
+          精业影视传媒官方网站，是一家深耕企业影像与品牌视频制作的<strong>专业</strong>机构。我们为企业、机构与创作者搭建高清原创内容生态，从宣传片、纪录短片到系列短视频，以<strong>匠心</strong>完成每一次影像表达，让品牌故事被看见、被记住。
+        </p>
+        <div class="jy-hero-actions">
+          <a class="jy-btn jy-btn-gold" href="#jy-feature">观看焦点影像</a>
+          <a class="jy-btn jy-btn-ghost" style="color:#eaf2f8;border-color:rgba(234,242,248,.35)" href="#jy-authors">认识创作者</a>
+          <button class="jy-btn jy-btn-ghost" style="color:#eaf2f8;border-color:rgba(234,242,248,.35)" type="button" data-open-modal="jy-modal-submit">企业合作咨询</button>
+        </div>
+        <div class="jy-hero-stats">
+          <div class="jy-stat"><b data-count="1280">1280+</b><span>原创影片交付</span></div>
+          <div class="jy-stat"><b data-count="86">86</b><span>签约创作者</span></div>
+          <div class="jy-stat"><b data-count="9">9</b><span>年持续运营</span></div>
+        </div>
+      </div>
+
+      <div class="jy-hero-visual">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d1b2a'/%3E%3Cstop offset='1' stop-color='%232a5570'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e8b45a'/%3E%3Cstop offset='1' stop-color='%23a56a1c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23g1)'/%3E%3Ccircle cx='640' cy='110' r='150' fill='%23e8b45a' opacity='.14'/%3E%3Ccircle cx='150' cy='450' r='190' fill='%232f7a9e' opacity='.22'/%3E%3Crect x='90' y='150' width='400' height='250' rx='14' fill='%2313293d' stroke='%23e8b45a' stroke-opacity='.4'/%3E%3Crect x='110' y='170' width='360' height='180' rx='8' fill='url(%23g2)' opacity='.78'/%3E%3Cpath d='M330 215l80 45-80 45z' fill='%230d1b2a'/%3E%3Crect x='110' y='368' width='230' height='12' rx='6' fill='%236b8ba4'/%3E%3Crect x='420' y='440' width='240' height='14' rx='7' fill='%23e8b45a' opacity='.6'/%3E%3Crect x='420' y='468' width='160' height='10' rx='5' fill='%236b8ba4' opacity='.7'/%3E%3Crect x='90' y='430' width='240' height='10' rx='5' fill='%236b8ba4'/%3E%3C/svg%3E" alt="精业影视传媒品牌首屏主视觉：机房灯光下的剪辑监看屏与播放标识" width="800" height="550">
+        </figure>
+        <button class="jy-hero-play" type="button" data-open-modal="jy-modal-player" aria-label="播放品牌形象片">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="jy-hero-caption">
+          <span>品牌形象片《把光交给时间》· 4′12″</span>
+          <span>4K 高清</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2 品牌简介 + S5 深度解析 -->
+  <section class="jy-section jy-section-alt" id="jy-about">
+    <div class="jy-wrap">
+      <div class="jy-section-head">
+        <div>
+          <span class="jy-eyebrow">About Jingye</span>
+          <h2 class="jy-h2">关于精业影视传媒<em>官方网站</em></h2>
+          <p class="jy-lead">一个以企业影像为根、以原创内容为枝的影像品牌。我们相信专业与温度可以并存，品牌故事值得被认真拍下来。</p>
+        </div>
+      </div>
+
+      <div class="jy-intro-card">
+        <p>
+          精业影视传媒成立于 2017 年，是一家专注企业影像与品牌视频内容的制作机构。九年间，我们服务过制造业、科技、文旅、消费与公益等垂直领域客户，累计交付原创影片 1280 余部，形成从前期策划、脚本创作、拍摄执行到后期调色与声音设计的完整链路。作为持续运营的影像品牌，精业影视传媒坚持正版素材与规范流程，为企业搭建可长期复用的内容资产库，也让创作者在这个平台上获得稳定成长。
+        </p>
+        <p style="margin-bottom:0">
+          在精业影视传媒官方网站，你可以看到官方发布的品牌片与系列纪录短片，也可以浏览企业动态、专题企划与用户口碑。我们希望这里不只是一个作品陈列页，而是一个有活力、有回应的影像社区——企业找到值得信赖的合作方，创作者找到被看见的入口，观众找到真实而温暖的影像。
+        </p>
+      </div>
+
+      <div class="jy-figure-row">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='p1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23eef3f7'/%3E%3Cstop offset='1' stop-color='%23c9dbe7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23p1)'/%3E%3Crect x='70' y='70' width='300' height='310' rx='10' fill='%23ffffff' stroke='%23c3d3df'/%3E%3Crect x='95' y='100' width='250' height='150' rx='6' fill='%2313293d'/%3E%3Cpath d='M190 145l60 35-60 35z' fill='%23e8b45a'/%3E%3Crect x='95' y='270' width='180' height='10' rx='5' fill='%23a9c0d2'/%3E%3Crect x='95' y='292' width='230' height='10' rx='5' fill='%23c9dbe7'/%3E%3Crect x='95' y='314' width='140' height='10' rx='5' fill='%23c9dbe7'/%3E%3Ccircle cx='590' cy='180' r='96' fill='%23e8b45a' opacity='.55'/%3E%3Ccircle cx='590' cy='180' r='58' fill='%230d1b2a'/%3E%3Cpath d='M572 152l46 28-46 28z' fill='%23ffffff'/%3E%3Crect x='460' y='320' width='290' height='18' rx='9' fill='%2313293d' opacity='.8'/%3E%3Crect x='460' y='352' width='200' height='12' rx='6' fill='%238fa9bd'/%3E%3C/svg%3E" alt="精业影视传媒剪辑工作台与监看屏工作场景示意" width="800" height="450">
+          <figcaption>精业影视传媒后期机房：从粗剪到调色的完整工序在同一空间闭环完成。</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='p2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%231a2f44'/%3E%3Cstop offset='1' stop-color='%23335a70'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23p2)'/%3E%3Crect x='0' y='330' width='800' height='120' fill='%230d1b2a' opacity='.55'/%3E%3Cpath d='M120 330 L120 200 L200 200 L200 330 Z' fill='%23e8b45a' opacity='.85'/%3E%3Cpath d='M240 330 L240 150 L320 150 L320 330 Z' fill='%23e8b45a' opacity='.6'/%3E%3Cpath d='M360 330 L360 240 L440 240 L440 330 Z' fill='%23e8b45a' opacity='.75'/%3E%3Cpath d='M480 330 L480 110 L560 110 L560 330 Z' fill='%23f5d79a'/%3E%3Cpath d='M600 330 L600 190 L680 190 L680 330 Z' fill='%23e8b45a' opacity='.5'/%3E%3Ccircle cx='640' cy='80' r='38' fill='%23f5d79a' opacity='.7'/%3E%3Crect x='90' y='60' width='280' height='10' rx='5' fill='%23c6d6e4' opacity='.6'/%3E%3C/svg%3E" alt="精业影视传媒年度内容产能与城市分布概念图" width="800" height="450">
+          <figcaption>年度内容产能分布：企业片、纪录短片与系列内容三条产品线并行。</figcaption>
+        </figure>
+      </div>
+
+      <div class="jy-interpret-grid" style="margin-top:34px">
+        <div class="jy-interpret-block">
+          <h3>品牌源起：从一支企业片到一套内容方法</h3>
+          <p>
+            精业影视传媒最初只是三个人的小团队，接的第一单是为一家老牌五金厂拍摄三十周年纪录片。厂房里机床轰鸣，老师傅把磨了二十年的零件摊在桌面上，镜头拍到他手上的老茧，客户当场沉默了很久。那次之后我们确认了一件事：企业影像的价值不在于炫技，而在于把真实的人、真实的工艺、真实的时间留下来。此后九年，我们把这种「先把人拍对，再把片子拍美」的方法沉淀为标准流程：前期访谈不少于三次，脚本里每个镜头都要能回答"为什么拍它"，拍摄现场必须预留人物自然行动的时间，后期调色统一以肤色和材质还原为基准。这套方法让精业影视传媒在垂直领域逐步建立起口碑，也让更多制造业与科技企业愿意把年度影像交给同一个团队持续运营。
+          </p>
+        </div>
+        <div class="jy-interpret-block">
+          <h3>内容生态：企业片、纪录短片与创作者栏目三层结构</h3>
+          <p>
+            在精业影视传媒官方网站上，内容被组织为三层。第一层是企业定制影像，包括品牌形象片、产品说明片与年度汇报片，追求清晰、专业、高清，可直接用于展会、招商与官网投放。第二层是原创纪录短片，例如「城市匠人」「车间里的春天」系列，由团队自主策划，成本由品牌自担，目的是保留那些商业项目里来不及细说的故事。第三层是创作者栏目，签约创作者可以提交独立选题，经过编审会后进入制作，成片在平台官方发布并参与年度评选。三层结构让内容既有商业上的确定性，也有创作上的自由度，这也是我们理解的内容生态：不是堆量，而是让不同目的的作品各得其所。
+          </p>
+        </div>
+        <div class="jy-interpret-block">
+          <h3>品质标准：从画幅到声音的可核查细节</h3>
+          <p>
+            谈到专业，精业影视传媒更愿意把标准写得具体。画幅上，企业形象片默认 4K 采集、3840×2160 交付，并同时输出竖版 9:16 与方版 1:1 用于社交媒体；色彩上，使用统一的 Log 采集与品牌 LUT，保证同一客户跨年度的片子放在一起不跳色；声音上，人物采访必须使用领夹麦加备份录音，环境声单独录制一层，混音响度控制在 -16 LUFS 左右，确保在手机外放与展厅音响下都不刺耳；字幕方面，中文使用思源黑体系，字号与安全边距按投放平台规范预留，避免竖屏裁切丢字。这些细节不会出现在宣传语里，但会体现在每一支交付影片的验收单上。我们相信值得信赖的口碑，来自可以逐条核对的品质。
+          </p>
+        </div>
+        <div class="jy-interpret-block">
+          <h3>社区与成长：让创作者被看见，让企业找到对的人</h3>
+          <p>
+            视频品牌官网如果只展示成品，很快就变成一个静态橱窗。精业影视传媒希望它更像一个持续运转的社区：创作者在这里发布作品、接受同行点评、参与命题挑战；企业在需求广场发布拍摄意向，由平台按领域匹配创作团队；观众可以在评论区留下具体意见，甚至投票决定下一期纪录短片的拍摄对象。我们每年举办一次「新影像提案大赛」，公开征集选题，获奖提案由平台出资完成制作，报名与上传入口长期开放。对内部团队而言，这也是成长机制——新入职的剪辑师必须独立完成一支三分钟短片才能进入商业项目组。多元的选题、包容的表达、真实的反馈，构成了这个平台最基础也最重要的部分。
+          </p>
+        </div>
+        <div class="jy-interpret-block" style="grid-column:1/-1;border-left-color:var(--jy-navy)">
+          <h3>社会责任与长期主义：影像之外的事</h3>
+          <p>
+            精业影视传媒持续为本地公益机构提供免费的影像记录服务，包括非遗手艺人档案、社区食堂日常与乡村学校美育课堂。这些项目不产生直接收益，却让团队保持对真实生活的敏感。我们也在内部推行绿色拍摄规范：优先租赁而非采购设备，外景拍摄减少一次性耗材，素材采用双备份加离线归档，降低重复拍摄造成的浪费。九年来，公司从三人扩展到四十余人，办公地点换过三次，唯一没有变的是每次看片会最后那句话——"这条片子，五年后你还愿意拿出来给别人看吗？"如果答案是否定的，我们就重剪。这大概就是匠心最朴素的样子，也是我们愿意继续把精业影视传媒这个品牌做下去的原因。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 -->
+  <section class="jy-section" id="jy-feature">
+    <div class="jy-wrap">
+      <div class="jy-section-head">
+        <div>
+          <span class="jy-eyebrow">Featured Works</span>
+          <h2 class="jy-h2">焦点影像 · <em>官方发布</em>的精品内容</h2>
+          <p class="jy-lead">本期焦点由编审会从近三个月上线的原创影片中选出，覆盖企业故事、城市纪录与创作幕后三类方向。</p>
+        </div>
+        <a class="jy-btn jy-btn-ghost jy-btn-sm" href="#jy-stream">查看全部视频</a>
+      </div>
+
+      <div class="jy-feature-grid">
+        <article class="jy-feature-main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a5570'/%3E%3Cstop offset='1' stop-color='%230d1b2a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Crect x='0' y='300' width='800' height='150' fill='%23e8b45a' opacity='.14'/%3E%3Ccircle cx='620' cy='120' r='90' fill='%23f5d79a' opacity='.35'/%3E%3Crect x='80' y='120' width='280' height='180' rx='10' fill='%23ffffff' opacity='.92'/%3E%3Crect x='100' y='140' width='240' height='110' rx='6' fill='%2313293d'/%3E%3Cpath d='M200 175l50 30-50 30z' fill='%23e8b45a'/%3E%3Crect x='100' y='264' width='160' height='9' rx='4' fill='%23a9c0d2'/%3E%3Crect x='100' y='282' width='200' height='9' rx='4' fill='%23c9dbe7'/%3E%3Cpath d='M420 300 L470 190 L520 300 Z' fill='%23e8b45a' opacity='.75'/%3E%3Cpath d='M520 300 L570 220 L620 300 Z' fill='%23f5d79a' opacity='.85'/%3E%3Cpath d='M620 300 L670 250 L720 300 Z' fill='%23e8b45a' opacity='.55'/%3E%3C/svg%3E" alt="焦点影像《车间里的春天》企业纪录片海报主视觉" width="800" height="450">
+          <div class="jy-feature-body">
+            <div class="jy-tagline">
+              <span class="jy-tag jy-tag-gold">本期焦点</span>
+              <span class="jy-tag">企业故事</span>
+              <span class="jy-tag">纪录短片</span>
+            </div>
+            <h3 class="jy-h3">车间里的春天：一家制造企业十二年的技改之路</h3>
+            <p style="color:#41505f;font-size:14.5px">
+              跟拍三个月，记录一家中型制造企业从手工装配到柔性产线的技改过程。片中没有宏大的口号，只有工程师反复调机的深夜、老师傅对精度的固执，以及产线升级后第一批零件下线的声音。适合作为企业年度品牌影像与内部文化宣导素材。
+            </p>
+            <div class="jy-meta">
+              <span>出品：精业影视传媒</span>
+              <span>时长 18′42″</span>
+              <span>播放 12.6 万</span>
+              <span>点赞 4,812</span>
+            </div>
+            <div class="jy-actions">
+              <button class="jy-mini-btn" type="button" data-like>👍 点赞 <span data-like-count>4812</span></button>
+              <button class="jy-mini-btn" type="button" data-save>♡ 收藏</button>
+              <button class="jy-mini-btn" type="button" data-copy>复制链接</button>
+              <button class="jy-mini-btn" type="button" data-open-modal="jy-modal-comment">写评论</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="jy-list-cards">
+          <article class="jy-list-card">
+            <div>
+              <h3>城市匠人 · 第二季第 3 集：修表匠的四十七年</h3>
+              <p>一间六平方米的修表铺，一位 63 岁的师傅，和抽屉里三千多张维修单据。</p>
+            </div>
+            <div class="jy-list-data">播放 8.4 万<br>收藏 1,206</div>
+          </article>
+          <article class="jy-list-card">
+            <div>
+              <h3>产品说明片怎么拍才不枯燥：三个分镜思路</h3>
+              <p>从拆解动画到使用场景还原，编导组拆解一支 90 秒产品片的完整结构。</p>
+            </div>
+            <div class="jy-list-data">播放 6.1 万<br>收藏 980</div>
+          </article>
+          <article class="jy-list-card">
+            <div>
+              <h3>创作幕后：一场雨戏是怎么等出来的</h3>
+              <p>连续四天蹲守气象窗口，灯光组、制片组与演员如何配合完成 40 秒雨夜镜头。</p>
+            </div>
+            <div class="jy-list-data">播放 5.7 万<br>收藏 842</div>
+          </article>
+          <article class="jy-list-card">
+            <div>
+              <h3>品牌故事短片《把手艺交给下一个人》</h3>
+              <p>以师徒交接为主线，记录非遗手工艺在年轻一代手中的延续方式。</p>
+            </div>
+            <div class="jy-list-data">播放 9.3 万<br>收藏 1,514</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 视频内容流 -->
+  <section class="jy-section jy-section-alt" id="jy-stream">
+    <div class="jy-wrap">
+      <div class="jy-section-head">
+        <div>
+          <span class="jy-eyebrow">Video Stream</span>
+          <h2 class="jy-h2">视频内容 · <em>高清原创</em>持续更新中</h2>
+          <p class="jy-lead">两列图文卡片呈现近期上线的重点视频，每支影片均标注作者、标签与互动数据，方便企业客户与观众快速筛选。</p>
+        </div>
+      </div>
+
+      <div class="jy-stream-grid">
+        <article class="jy-video-card">
+          <div class="jy-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f5d79a'/%3E%3Cstop offset='1' stop-color='%23a56a1c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23v1)'/%3E%3Ccircle cx='180' cy='140' r='110' fill='%23ffffff' opacity='.35'/%3E%3Crect x='330' y='120' width='360' height='210' rx='10' fill='%230d1b2a' opacity='.85'/%3E%3Crect x='355' y='150' width='310' height='14' rx='7' fill='%23e8b45a'/%3E%3Crect x='355' y='180' width='240' height='10' rx='5' fill='%23c6d6e4' opacity='.7'/%3E%3Crect x='355' y='204' width='280' height='10' rx='5' fill='%23c6d6e4' opacity='.5'/%3E%3Crect x='355' y='250' width='120' height='34' rx='17' fill='%23e8b45a'/%3E%3Cpath d='M600 320l40 24-40 24z' fill='%23f5d79a' opacity='.7'/%3E%3C/svg%3E" alt="视频封面：企业宣传片镜头语言拆解课堂画面" width="800" height="450">
+            <span class="jy-badge">教程干货</span>
+          </div>
+          <div class="jy-video-body">
+            <h3>企业宣传片的五种镜头语言，什么时候该用哪一种</h3>
+            <p>推、拉、摇、移、跟不是炫技清单。本期用六支真实案例对比，讲清楚每个运动镜头背后想表达的情绪。</p>
+            <div class="jy-video-foot">
+              <span class="jy-author">主讲：沈其远</span>
+              <span style="font-size:12px;color:var(--jy-gray)">播放 4.2 万 · 点赞 1,633</span>
+            </div>
+            <div class="jy-actions">
+              <button class="jy-mini-btn" type="button" data-like>👍 <span data-like-count>1633</span></button>
+              <button class="jy-mini-btn" type="button" data-save>♡ 收藏</button>
+              <button class="jy-mini-btn" type="button" data-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jy-video-card">
+          <div class="jy-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f7a9e'/%3E%3Cstop offset='1' stop-color='%230d1b2a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23v2)'/%3E%3Crect x='0' y='290' width='800' height='160' fill='%23e8b45a' opacity='.12'/%3E%3Cpath d='M80 340 Q200 220 320 300 T560 260 T760 320' stroke='%23f5d79a' stroke-width='6' fill='none' opacity='.8'/%3E%3Ccircle cx='200' cy='150' r='56' fill='%23f5d79a' opacity='.55'/%3E%3Crect x='330' y='110' width='300' height='16' rx='8' fill='%23ffffff' opacity='.85'/%3E%3Crect x='330' y='146' width='220' height='10' rx='5' fill='%23c6d6e4' opacity='.7'/%3E%3Crect x='330' y='170' width='260' height='10' rx='5' fill='%23c6d6e4' opacity='.5'/%3E%3C/svg%3E" alt="视频封面：城市匠人修表铺内的放大镜与零件盘" width="800" height="450">
+            <span class="jy-badge">城市探索</span>
+          </div>
+          <div class="jy-video-body">
+            <h3>城市匠人 · 修表匠的四十七年</h3>
+            <p>老城巷子里的六平方米修表铺，师傅每天九点开门，用放大镜看清每一个齿轮的磨损。</p>
+            <div class="jy-video-foot">
+              <span class="jy-author">导演：林知远</span>
+              <span style="font-size:12px;color:var(--jy-gray)">播放 8.4 万 · 点赞 3,206</span>
+            </div>
+            <div class="jy-actions">
+              <button class="jy-mini-btn" type="button" data-like>👍 <span data-like-count>3206</span></button>
+              <button class="jy-mini-btn" type="button" data-save>♡ 收藏</button>
+              <button class="jy-mini-btn" type="button" data-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jy-video-card">
+          <div class="jy-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='v3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2313293d'/%3E%3Cstop offset='1' stop-color='%232f7a52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23v3)'/%3E%3Crect x='90' y='90' width='250' height='270' rx='10' fill='%23ffffff' opacity='.9'/%3E%3Crect x='115' y='115' width='200' height='130' rx='8' fill='%231a3f2c'/%3E%3Ccircle cx='215' cy='180' r='36' fill='%23e8b45a'/%3E%3Crect x='115' y='266' width='150' height='10' rx='5' fill='%23a9c0d2'/%3E%3Crect x='115' y='288' width='180' height='10' rx='5' fill='%23c9dbe7'/%3E%3Ccircle cx='580' cy='160' r='80' fill='%23f5d79a' opacity='.4'/%3E%3Cpath d='M520 300 L580 210 L640 300 Z' fill='%23e8b45a' opacity='.7'/%3E%3Crect x='420' y='340' width='310' height='12' rx='6' fill='%23c6d6e4' opacity='.5'/%3E%3C/svg%3E" alt="视频封面：自然光下的手作工坊与工具特写" width="800" height="450">
+            <span class="jy-badge">手作 DIY</span>
+          </div>
+          <div class="jy-video-body">
+            <h3>三十天做一把木椅：从选料到打磨的完整记录</h3>
+            <p>不加速、不省略失败。把开料、榫接、打磨与上油的过程完整呈现，包括两次榫头开裂的重来。</p>
+            <div class="jy-video-foot">
+              <span class="jy-author">拍摄：周木白</span>
+              <span style="font-size:12px;color:var(--jy-gray)">播放 6.9 万 · 点赞 2,744</span>
+            </div>
+            <div class="jy-actions">
+              <button class="jy-mini-btn" type="button" data-like>👍 <span data-like-count>2744</span></button>
+              <button class="jy-mini-btn" type="button" data-save>♡ 收藏</button>
+              <button class="jy-mini-btn" type="button" data-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="jy-video-card">
+          <div class="jy-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='v4' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%236b3f7a'/%3E%3Cstop offset='1' stop-color='%2313293d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23v4)'/%3E%3Crect x='80' y='80' width='180' height='290' rx='8' fill='%23ffffff' opacity='.14'/%3E%3Crect x='280' y='130' width='180' height='240' rx='8' fill='%23ffffff' opacity='.24'/%3E%3Crect x='480' y='60' width='180' height='310' rx='8' fill='%23ffffff' opacity='.34'/%3E%3Ccircle cx='150' cy='140' r='26' fill='%23e8b45a'/%3E%3Ccircle cx='350' cy='190' r='26' fill='%23f5d79a'/%3E%3Ccircle cx='550' cy='120' r='26' fill='%23e8b45a' opacity='.85'/%3E%3Crect x='120' y='330' width='110' height='8' rx='4' fill='%23c6d6e4'/%3E%3C/svg%3E" alt="视频封面：三张并排的创作者面试人物卡片" width="800" height="450">
+            <span class="jy-badge">人物访谈</span>
+          </div>
+          <div class="jy-video-body">
+            <h3>访谈：做了十二年企业片，我为什么还在改脚本</h3>
+            <p>与精业影视传媒总编导的那场两小时对谈，聊脚本、聊客户预期，也聊创作者如何不被流程磨平。</p>
+            <div class="jy-video-foot">
+              <span class="jy-author">主持：许南</span>
+              <span style="font-size:12px;color:var(--jy-gray)">播放 3.8 万 · 点赞 1,412</span>
+            </div>
+            <div class="jy-actions">
+              <button class="jy-mini-btn" type="button" data-like>👍 <span data-like-count>1412</span></button>
+              <button class="jy-mini-btn" type="button" data-save>♡ 收藏</button>
+              <button class="jy-mini-btn" type="button" data-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <ul class="jy-list-cards" style="margin-top:22px">
+        <li class="jy-list-card">
+          <div>
+            <h3>实用技巧：采访收音的三个稳妥方案</h3>
+            <p>领夹麦、枪麦与手机备份的取舍，以及现场突发噪音时的补救方式。</p>
+          </div>
+          <div class="jy-list-data">播放 2.8 万 · 收藏 906</div>
+        </li>
+        <li class="jy-list-card">
+          <div>
+            <h3>行业观察：企业内容预算正在向"系列化"倾斜</h3>
+            <p>从单支大片到按季度更新的内容栏目，制作方与品牌方的关系正在变化。</p>
+          </div>
+          <div class="jy-list-data">播放 2.1 万 · 收藏 631</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="jy-section" id="jy-topics">
+    <div class="jy-wrap">
+      <div class="jy-section-head">
+        <div>
+          <span class="jy-eyebrow">Programs</span>
+          <h2 class="jy-h2">专题企划 · <em>持续运营</em>的品牌栏目</h2>
+          <p class="jy-lead">精业影视传媒每年保留固定预算用于自主企划，以下三个专题长期更新，欢迎创作者报名参与。</p>
+        </div>
+      </div>
+
+      <div class="jy-topic-grid">
+        <article class="jy-topic-card">
+          <span class="jy-status">更新中 · 第 3 集已上线</span>
+          <h3>城市匠人</h3>
+          <p style="font-size:13.8px;color:#41505f;margin:0">走进城市里那些仍在坚持手工的作坊与店铺，用一支 8-12 分钟的短片留住手艺的时间感。</p>
+          <ul>
+            <li>修表匠的四十七年</li>
+            <li>巷口裁缝铺的最后一台缝纫机</li>
+            <li>做铜器的第九代传人</li>
+          </ul>
+        </article>
+
+        <article class="jy-topic-card">
+          <span class="jy-status">更新中 · 每月双更</span>
+          <h3>车间里的春天</h3>
+          <p style="font-size:13.8px;color:#41505f;margin:0">聚焦制造业一线，记录技改、产线升级与工程师群体的日常，让产业故事有具体的脸。</p>
+          <ul>
+            <li>技改十二年：一家五金厂的转身</li>
+            <li>凌晨两点的质检车间</li>
+            <li>从学徒到班组长的七年</li>
+          </ul>
+        </article>
+
+        <article class="jy-topic-card">
+          <span class="jy-status plan">报名中 · 12 月开拍</span>
+          <h3>新影像提案大赛</h3>
+          <p style="font-size:13.8px;color:#41505f;margin:0">公开征集选题，入选提案由平台出资完成制作，并进入年度精品内容展映。</p>
+          <ul>
+            <li>征稿方向：城市、手艺、公益、科技</li>
+            <li>报名方式：官网投稿入口提交提案</li>
+            <li>评审：编审会初选 + 用户投票复选</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="jy-section jy-section-alt" id="jy-authors">
+    <div class="jy-wrap">
+      <div class="jy-section-head">
+        <div>
+          <span class="jy-eyebrow">Creators</span>
+          <h2 class="jy-h2">创作者矩阵 · <em>值得信赖</em>的影像伙伴</h2>
+          <p class="jy-lead">以下为精业影视传媒签约创作者与核心主创。点击「查看简介」可展开完整档案与近期作品。</p>
+        </div>
+      </div>
+
+      <div class="jy-author-grid">
+        <article class="jy-author-card">
+          <div class="jy-avatar a1">林</div>
+          <div>
+            <h3>林知远</h3>
+            <div class="jy-domain">纪录短片 / 城市题材</div>
+            <div class="jy-counts"><span>作品 46</span><span>粉丝 8.2 万</span></div>
+            <p>入行十年，最擅长在有限空间里找到人物的行动节奏。拍摄《城市匠人》系列时习惯先空手蹲点三天，和拍摄对象一起吃饭再开机。他认为纪录片最难的不是拍到，而是被允许留在现场。</p>
+            <button class="jy-author-link" type="button" data-author="林知远|纪录短片导演，代表作《城市匠人》系列、《巷口裁缝铺》。主张先建立信任再举起摄影机，擅长用固定机位与自然光呈现人物的日常节奏。">查看简介</button>
+          </div>
+        </article>
+
+        <article class="jy-author-card">
+          <div class="jy-avatar a2">沈</div>
+          <div>
+            <h3>沈其远</h3>
+            <div class="jy-domain">企业影像 / 镜头语言</div>
+            <div class="jy-counts"><span>作品 63</span><span>粉丝 6.7 万</span></div>
+            <p>摄影指导出身，现负责精业影视传媒企业片线的影像设计。喜欢用最朴素的运动镜头讲清楚一件事，反对为炫技而设计的复杂运镜。业余在平台上更新镜头语言教程，被同行称为"讲人话的技术流"。</p>
+            <button class="jy-author-link" type="button" data-author="沈其远|摄影指导，精业影视传媒企业影像线负责人。擅长以克制的镜头运动服务叙事，主讲平台《镜头语言拆解》系列教程。">查看简介</button>
+          </div>
+        </article>
+
+        <article class="jy-author-card">
+          <div class="jy-avatar a3">周</div>
+          <div>
+            <h3>周木白</h3>
+            <div class="jy-domain">手作记录 / 慢节奏影像</div>
+            <div class="jy-counts"><span>作品 38</span><span>粉丝 5.9 万</span></div>
+            <p>木工出身转行做影像，拍摄时坚持完整记录失败过程。他的《三十天做一把木椅》没有任何加速镜头，却收获了平台手作类目年度最高收藏。相信观众能分辨出哪些细节是认真拍下来的。</p>
+            <button class="jy-author-link" type="button" data-author="周木白|手作类创作者，前木工。坚持不加速、不省略失败过程的记录方式，代表作《三十天做一把木椅》《打磨的十二道工序》。">查看简介</button>
+          </div>
+        </article>
+
+        <article class="jy-author-card">
+          <div class="jy-avatar a4">许</div>
+          <div>
+            <h3>许南</h3>
+            <div class="jy-domain">人物访谈 / 内容策划</div>
+            <div class="jy-counts"><span>作品 52</span><span>粉丝 7.4 万</span></div>
+            <p>访谈主持人兼内容策划，擅长把技术话题问出人情味。她的提问清单里永远有一栏"和拍摄无关但必须问的问题"，很多片子里最好的那句话都来自这一栏。负责平台年度提案大赛的评审组织工作。</p>
+            <button class="jy-author-link" type="button" data-author="许南|访谈主持与内容策划，负责精业影视传媒人物访谈栏目及年度提案大赛评审组织。擅长以非技术提问打开受访者的真实表达。">查看简介</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 用户口碑 -->
+  <section class="jy-section" id="jy-comments">
+    <div class="jy-wrap">
+      <div class="jy-section-head">
+        <div>
+          <span class="jy-eyebrow">Feedback</span>
+          <h2 class="jy-h2">用户口碑 · <em>真实</em>的合作反馈</h2>
+          <p class="jy-lead">以下评价来自企业客户、合作创作者与长期观众，内容经授权后展示，未作删改。</p>
+        </div>
+      </div>
+
+      <div class="jy-comment-layout">
+        <div class="jy-comment-list">
+          <article class="jy-comment">
+            <div class="jy-c-head"><strong>陈先生 · 制造企业品牌负责人</strong><span>2026-10-18</span></div>
+            <p>第三次和精业影视传媒合作年度片，最放心的是他们对工厂流程的理解，不用我们反复解释工序就能拍对。</p>
+          </article>
+          <article class="jy-comment">
+            <div class="jy-c-head"><strong>阿禾 · 独立创作者</strong><span>2026-10-30</span></div>
+            <p>投稿到收到编审反馈只用了一周，意见写得很具体，连第几分钟节奏拖了都标出来，这在同类平台里很少见。</p>
+          </article>
+          <article class="jy-comment">
+            <div class="jy-c-head"><strong>小满 · 长期观众</strong><span>2026-11-06</span></div>
+            <p>《城市匠人》每集都看，没有配乐轰炸也没有刻意煽情，就是安安静静把一个店铺拍完，反而更打动人。</p>
+          </article>
+          <article class="jy-comment">
+            <div class="jy-c-head"><strong>文旅项目组 · 合作方</strong><span>2026-11-11</span></div>
+            <p>交付比合同提前了四天，竖版素材也一并给了，省了我们二次剪辑的人力。沟通群里回复很及时。</p>
+          </article>
+          <article class="jy-comment">
+            <div class="jy-c-head"><strong>文姐 · 非遗工坊主理人</strong><span>2026-11-15</span></div>
+            <p>拍摄那天师傅情绪不太好，导演组没有催，等他喝完茶才开机。这种耐心让片子里的状态特别自然。</p>
+          </article>
+        </div>
+
+        <aside class="jy-quote-block">
+          <blockquote>我们不是要找拍得最漂亮的团队，而是要找愿意花时间理解我们业务的人。精业影视传媒是后者。</blockquote>
+          <cite>—— 某装备制造企业 品牌总监</cite>
+          <div class="jy-score">
+            <div><b>4.9</b><span>综合口碑评分</span></div>
+            <div><b>96%</b><span>客户复购意向</span></div>
+            <div><b>128</b><span>累计合作企业</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + 合作 + FAQ -->
+  <section class="jy-section jy-section-alt" id="jy-news">
+    <div class="jy-wrap">
+      <div class="jy-two-col">
+        <div>
+          <span class="jy-eyebrow">News</span>
+          <h2 class="jy-h2" style="font-size:26px">企业动态与<em>更新日志</em></h2>
+          <ul class="jy-news" style="margin-top:18px">
+            <li><b>《城市匠人》第二季第 3 集上线</b><time>2026-11-22</time></li>
+            <li><b>12 月企业影像档期开放，可预约上门勘景</b><time>2026-11-18</time></li>
+            <li><b>新影像提案大赛报名通道开启，截止次年 1 月</b><time>2026-11-15</time></li>
+            <li><b>后期机房完成调色工作台升级，支持 HDR 交付</b><time>2026-11-09</time></li>
+            <li><b>与本地公益机构续签非遗影像记录合作</b><time>2026-11-03</time></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="jy-eyebrow">FAQ</span>
+          <h2 class="jy-h2" style="font-size:26px" id="jy-faq">常见问题<em>解答</em></h2>
+          <div class="jy-faq" style="margin-top:18px">
+            <details>
+              <summary>企业形象片的常规制作周期是多久？</summary>
+              <p>标准 3-5 分钟企业形象片从签约到交付约 6-8 周，含前期访谈、脚本两轮修改、1-2 天拍摄与两轮后期修改。若涉及多地拍摄或动画场景，周期相应延长。</p>
+            </details>
+            <details>
+              <summary>可以只做后期剪辑吗？</summary>
+              <p>可以。精业影视传媒提供独立的后期服务，包括粗剪、精剪、调色、声音设计与字幕包装。客户需提供规范素材与备份，我们会先做素材体检再报价。</p>
+            </details>
+            <details>
+              <summary>成片会提供哪些版本？</summary>
+              <p>默认交付 4K 横版主片、1080P 压缩版、9:16 竖版与 1:1 方版，并提供封面图与字幕文件。如需其他比例或时长版本，可在合同中单独约定。</p>
+            </details>
+            <details>
+              <summary>创作者如何向平台投稿？</summary>
+              <p>通过官网投稿入口提交选题简介、过往作品链接与预计预算，编审会每周集中查看一次，反馈一般在 7 个工作日内给出。</p>
+            </details>
+            <details>
+              <summary>提案大赛的评选标准是什么？</summary>
+              <p>主要看选题的独特性、可执行性与影像表达的潜力，其次考虑与年度主题的契合度。复选阶段会开放用户投票，票数与评委意见各占一半权重。</p>
+            </details>
+            <details>
+              <summary>是否承接外地拍摄？</summary>
+              <p>承接。团队可跨城执行拍摄，差旅费用按实际发生结算。外地项目建议预留更多勘景时间，必要时我们会提前派先遣组。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:44px">
+        <h3 class="jy-h3" style="margin-bottom:14px">合作品牌与伙伴</h3>
+        <div class="jy-partner-grid">
+          <div class="jy-partner">恒益精工</div>
+          <div class="jy-partner">南岭文旅</div>
+          <div class="jy-partner">拓远科技</div>
+          <div class="jy-partner">青禾公益</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 联系与投稿 -->
+  <section class="jy-section" id="jy-contact">
+    <div class="jy-wrap">
+      <div class="jy-contact-card">
+        <div>
+          <span class="jy-eyebrow">Contact</span>
+          <h2 class="jy-h2" style="font-size:26px;margin-bottom:6px">联系我们，开始一次<em>认真的影像合作</em></h2>
+          <p>企业影像咨询、创作者投稿与媒体合作均可通过以下方式联系。工作时间为周一至周五 10:00-19:00。</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="jy-btn jy-btn-dark" type="button" data-open-modal="jy-modal-submit">提交投稿/需求</button>
+          <button class="jy-btn jy-btn-ghost" type="button" data-copy>复制本页链接</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="jy-footer">
+  <div class="jy-wrap">
+    <div class="jy-footer-grid">
+      <div>
+        <div class="jy-brand-name">精业<span style="color:var(--jy-gold)">影视</span>传媒</div>
+        <p class="jy-foot-desc">精业影视传媒官方网站 · 专注企业影像与品牌视频内容制作，持续运营的原创影像平台。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#jy-feature">焦点影像</a></li>
+          <li><a href="#jy-stream">视频内容</a></li>
+          <li><a href="#jy-topics">专题企划</a></li>
+          <li><a href="#jy-authors">创作者</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>服务</h4>
+        <ul>
+          <li><a href="#jy-about">企业影像制作</a></li>
+          <li><a href="#jy-about">纪录短片拍摄</a></li>
+          <li><a href="#jy-contact">后期与调色</a></li>
+          <li><a href="#jy-contact">投稿与提案</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>支持</h4>
+        <ul>
+          <li><a href="#jy-faq">常见问题</a></li>
+          <li><a href="#jy-news">企业动态</a></li>
+          <li><a href="#jy-comments">用户口碑</a></li>
+          <li><a href="#jy-contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="jy-footer-bottom">
+      <span>© 2026 精业影视传媒 版权所有 · 持续运营中</span>
+      <span>官方网站 | 用户至上 | 品牌备案号：影备 2026-1122 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="jy-backtop" id="jy-backtop" type="button" aria-label="回到顶部">↑</button>
+<div class="jy-toast" id="jy-toast" role="status" aria-live="polite"></div>
+
+<!-- 搜索/播放/评论/投稿/作者弹窗 -->
+<div class="jy-modal" id="jy-modal-player" role="dialog" aria-modal="true" aria-labelledby="jy-player-title">
+  <div class="jy-modal-box">
+    <button class="jy-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="jy-player-title">品牌形象片《把光交给时间》</h3>
+    <p>本页为品牌官网内容展示页，影片播放由官方渠道提供。点击下方按钮可复制影片链接，分享给同事或在评审会上使用。</p>
+    <button class="jy-btn jy-btn-gold" type="button" data-copy>复制影片链接</button>
+  </div>
+</div>
+
+<div class="jy-modal" id="jy-modal-comment" role="dialog" aria-modal="true" aria-labelledby="jy-comment-title">
+  <div class="jy-modal-box">
+    <button class="jy-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="jy-comment-title">写一条评论</h3>
+    <p>你的意见会进入编审会月度复盘，也会展示在影片评论区（经授权后）。</p>
+    <div class="jy-modal-field">
+      <label for="jy-comment-name">昵称</label>
+      <input id="jy-comment-name" type="text" placeholder="怎么称呼你">
+    </div>
+    <div class="jy-modal-field">
+      <label for="jy-comment-text">评论内容</label>
+      <textarea id="jy-comment-text" rows="4" placeholder="说说你对影片的具体看法"></textarea>
+    </div>
+    <button class="jy-btn jy-btn-dark" type="button" id="jy-comment-send">提交评论</button>
+  </div>
+</div>
+
+<div class="jy-modal" id="jy-modal-submit" role="dialog" aria-modal="true" aria-labelledby="jy-submit-title">
+  <div class="jy-modal-box">
+    <button class="jy-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="jy-submit-title">投稿 / 企业需求登记</h3>
+    <p>留下基本信息，编审会将在 7 个工作日内与你联系。请勿提交敏感内容。</p>
+    <div class="jy-modal-field">
+      <label for="jy-submit-name">称呼</label>
+      <input id="jy-submit-name" type="text" placeholder="姓名或机构名">
+    </div>
+    <div class="jy-modal-field">
+      <label for="jy-submit-type">类型</label>
+      <input id="jy-submit-type" type="text" placeholder="企业影像 / 创作者投稿 / 媒体合作">
+    </div>
+    <div class="jy-modal-field">
+      <label for="jy-submit-desc">需求简述</label>
+      <textarea id="jy-submit-desc" rows="3" placeholder="一句话说明你的项目或选题"></textarea>
+    </div>
+    <button class="jy-btn jy-btn-dark" type="button" id="jy-submit-send">提交</button>
+  </div>
+</div>
+
+<div class="jy-modal" id="jy-modal-author" role="dialog" aria-modal="true" aria-labelledby="jy-author-title">
+  <div class="jy-modal-box">
+    <button class="jy-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="jy-author-title">创作者简介</h3>
+    <p id="jy-author-text">—</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById("jy-toast");
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("show"); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById("jy-burger");
+  var nav = document.getElementById("jy-nav");
+  if(burger){
+    burger.addEventListener("click", function(){
+      var open = nav.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+    });
+    nav.addEventListener("click", function(e){
+      if(e.target.tagName === "A"){
+        nav.classList.remove("open");
+        burger.setAttribute("aria-expanded","false");
+      }
+    });
+  }
+
+  /* 搜索前端反馈 */
+  var searchInput = document.getElementById("jy-search-input");
+  var searchBtn = document.getElementById("jy-search-btn");
+  var searchFeedback = document.getElementById("jy-search-feedback");
+  var searchIndex = [
+    {t:"城市匠人 · 修表匠的四十七年", k:"城市 纪录 手作 林知远"},
+    {t:"车间里的春天：技改十二年", k:"企业 制造 纪录 品牌"},
+    {t:"企业宣传片镜头语言拆解", k:"教程 镜头 沈其远 干货"},
+    {t:"三十天做一把木椅", k:"手作 木工 周木白 DIY"},
+    {t:"访谈：做了十二年企业片", k:"访谈 许南 策划"},
+    {t:"新影像提案大赛报名", k:"比赛 报名 提案 投稿"}
+  ];
+  function doSearch(){
+    var q = (searchInput.value || "").trim();
+    if(!q){
+      searchFeedback.classList.remove("on");
+      searchFeedback.textContent = "";
+      return;
+    }
+    var hits = searchIndex.filter(function(item){
+      return item.t.indexOf(q) > -1 || item.k.indexOf(q) > -1;
+    });
+    searchFeedback.classList.add("on");
+    if(hits.length){
+      searchFeedback.textContent = "找到 " + hits.length + " 条相关内容：" + hits.map(function(h){return "《" + h.t + "》";}).join("、");
+    }else{
+      searchFeedback.textContent = "暂无匹配结果，可尝试「纪录」「企业」「手作」等关键词，或通过投稿入口提交需求。";
+    }
+  }
+  if(searchBtn){
+    searchBtn.addEventListener("click", doSearch);
+    searchInput.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){ e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener("input", function(){
+      if(!searchInput.value.trim()){
+        searchFeedback.classList.remove("on");
+        searchFeedback.textContent = "";
+      }
+    });
+  }
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll("[data-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var span = btn.querySelector("[data-like-count]");
+      var n = span ? parseInt(span.textContent.replace(/,/g,""),10) : 0;
+      if(btn.classList.contains("liked")){
+        btn.classList.remove("liked");
+        n = Math.max(0, n - 1);
+        showToast("已取消点赞");
+      }else{
+        btn.classList.add("liked");
+        n = n + 1;
+        showToast("点赞成功，感谢你的支持");
+      }
+      if(span){ span.textContent = n.toLocaleString("en-US"); }
+    });
+  });
+
+  document.querySelectorAll("[data-save]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.classList.toggle("saved");
+      btn.textContent = on ? "♥ 已收藏" : "♡ 收藏";
+      showToast(on ? "已加入收藏，可在个人中心查看" : "已取消收藏");
+    });
+  });
+
+  /* 复制链接 */
+  function copyLink(){
+    var done = function(){ showToast("链接已复制，可以分享给同事了"); };
+    var fail = function(){ showToast("复制失败，请手动选择地址栏链接"); };
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(window.location.href).then(done).catch(fail);
+      }else{
+        var ta = document.createElement("textarea");
+        ta.value = window.location.href;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        done();
+      }
+    }catch(err){ fail(); }
+  }
+  document.querySelectorAll("[data-copy]").forEach(function(btn){
+    btn.addEventListener("click", copyLink);
+  });
+
+  /* 弹窗通用 */
+  var lastFocus = null;
+  function openModal(id){
+    var modal = document.getElementById(id);
+    if(!modal) return;
+    lastFocus = document.activeElement;
+    modal.classList.add("open");
+    var closeBtn = modal.querySelector(".jy-modal-close");
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeAllModals(){
+    document.querySelectorAll(".jy-modal.open").forEach(function(m){ m.classList.remove("open"); });
+    if(lastFocus && typeof lastFocus.focus === "function"){ lastFocus.focus(); }
+  }
+  document.querySelectorAll("[data-open-modal]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      openModal(btn.getAttribute("data-open-modal"));
+    });
+  });
+  document.querySelectorAll("[data-close-modal]").forEach(function(btn){
+    btn.addEventListener("click", closeAllModals);
+  });
+  document.querySelectorAll(".jy-modal").forEach(function(modal){
+    modal.addEventListener("click", function(e){
+      if(e.target === modal){ closeAllModals(); }
+    });
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ closeAllModals(); }
+  });
+
+  /* 评论提交 */
+  var commentSend = document.getElementById("jy-comment-send");
+  if(commentSend){
+    commentSend.addEventListener("click", function(){
+      var text = document.getElementById("jy-comment-text").value.trim();
+      if(text.length < 4){
+        showToast("评论不少于 4 个字");
+        return;
+      }
+      document.getElementById("jy-comment-text").value = "";
+      closeAllModals();
+      showToast("评论已提交，感谢你的真实反馈");
+    });
+  }
+
+  /* 投稿提交 */
+  var submitSend = document.getElementById("jy-submit-send");
+  if(submitSend){
+    submitSend.addEventListener("click", function(){
+      var name = document.getElementById("jy-submit-name").value.trim();
+      var type = document.getElementById("jy-submit-type").value.trim();
+      if(!name || !type){
+        showToast("请填写称呼与类型");
+        return;
+      }
+      document.getElementById("jy-submit-name").value = "";
+      document.getElementById("jy-submit-type").value = "";
+      document.getElementById("jy-submit-desc").value = "";
+      closeAllModals();
+      showToast("已收到登记信息，编审会将尽快联系你");
+    });
+  }
+
+  /* 作者简介弹窗 */
+  document.querySelectorAll("[data-author]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var raw = btn.getAttribute("data-author") || "";
+      var parts = raw.split("|");
+      document.getElementById("jy-author-title").textContent = parts[0] || "创作者简介";
+      document.getElementById("jy-author-text").textContent = parts[1] || "";
+      openModal("jy-modal-author");
+    });
+  });
+
+  /* 回到顶部 */
+  var backtop = document.getElementById("jy-backtop");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 520){ backtop.classList.add("show"); }
+    else{ backtop.classList.remove("show"); }
+  }, {passive:true});
+  backtop.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  /* 数字滚动 */
+  var stats = document.querySelectorAll("[data-count]");
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(!entry.isIntersecting) return;
+        var el = entry.target;
+        var target = parseInt(el.getAttribute("data-count"),10);
+        var suffix = el.textContent.indexOf("+") > -1 ? "+" : "";
+        var start = null;
+        function step(ts){
+          if(!start) start = ts;
+          var p = Math.min((ts - start) / 1100, 1);
+          var val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+          el.textContent = val.toLocaleString("en-US") + suffix;
+          if(p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    }, {threshold:.5});
+    stats.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+  </html>
